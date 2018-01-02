@@ -1,0 +1,43 @@
+{
+	"pages":[
+		"pages/index/index"
+	],
+	"window":{
+		"backgroundTextStyle":"light",
+		"navigationBarBackgroundColor": "#ff6700",
+		"navigationBarTitleText": "Go商城",
+		"navigationBarTextStyle":"black"
+	},
+	"tabBar": {
+		"color":"#999",
+	    "list": [
+	    	{
+	      		"pagePath": "pages/index/index",
+	      		"text": "首页",
+	      		"iconPath":"static/images/icon_home.png",
+	      		"selectedIconPath":"static/images/icon_active.png"
+	    	}, 
+	   	 	{
+	      		"pagePath": "pages/type/type",
+	      		"text": "分类",
+	      		"iconPath":"static/images/icon_type.png",
+	      		"selectedIconPath":"static/images/icon_active.png"
+	    	},
+	    	{
+	      		"pagePath": "pages/car/car",
+	      		"text": "购物车",
+	      		"iconPath":"static/images/icon_car.png",
+	      		"selectedIconPath":"static/images/icon_active.png"
+	    	},
+	    	{
+	      		"pagePath": "pages/my/my",
+	      		"text": "我的",
+	      		"iconPath":"static/images/icon_my.png",
+	      		"selectedIconPath":"static/images/icon_active.png"
+	    	}
+	   	],
+	    "backgroundColor":"#fff",
+	    "borderStyle":"white",
+	    "selectedColor":"#ff6700"
+	}
+}
