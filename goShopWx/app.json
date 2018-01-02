@@ -6,7 +6,7 @@
 		"backgroundTextStyle":"light",
 		"navigationBarBackgroundColor": "#ff6700",
 		"navigationBarTitleText": "Go商城",
-		"navigationBarTextStyle":"black"
+		"navigationBarTextStyle":"white"
 	},
 	"tabBar": {
 		"color":"#999",
