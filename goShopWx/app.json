@@ -1,11 +1,12 @@
 {
 	"pages":[
-		"pages/index/index"
+		"pages/index/index",
+		"pages/search/search"
 	],
 	"window":{
+		"navigationBarTitleText": "Go商城",
 		"backgroundTextStyle":"light",
 		"navigationBarBackgroundColor": "#ff6700",
-		"navigationBarTitleText": "Go商城",
 		"navigationBarTextStyle":"white"
 	},
 	"tabBar": {

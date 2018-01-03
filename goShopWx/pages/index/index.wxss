@@ -1,1 +1,49 @@
+/* 导入公共样式 */
 @import '../../static/css/style.wxss';
+
+
+/* 私有样式 */
+.header{
+	width:100%;
+}
+.top{
+	flex-direction:row;
+	display:flex;
+}
+.logo,
+.my{
+	margin-top:10rpx;
+	width:100rpx;
+	height:90rpx;
+}
+.logo image{
+	width:70rpx;
+	height:70rpx;
+	margin-left:20rpx;
+	margin-top:15rpx;
+}
+.search input{
+	width:470rpx;
+	padding-left:70rpx;
+	height:64rpx;
+	border:1rpx solid #e8e8e8;
+	margin:20rpx auto;
+	font-size:30rpx;
+	background-color:#fff;
+}
+.search{
+	width:540rpx;
+	position: relative;
+	margin:0 10rpx;
+}
+.search-icon{
+	position:absolute;
+	top:35rpx;
+	left:20rpx;
+}
+.my image{
+	width:60rpx;
+	height:60rpx;
+	margin-top:10rpx;
+	margin-left:15rpx;
+}
