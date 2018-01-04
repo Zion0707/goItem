@@ -1,7 +1,7 @@
 <view class="content">
 	<view class="header">
 		<view class="top">
-			<view class="back">
+			<view class="back" bindtap="back">
 				<image src="../../images/back.png" />
 			</view>
 			<view class="search">
@@ -14,14 +14,14 @@
 	</view>
 
 	<view class="main">
-		<view class="hot-shop">
-			<text>热门商品</text>
-			<view class="list-ul">
-				<view class="list-li">鱼头豆腐</view>
-				<view class="list-li">蒜香小龙虾</view>
-				<view class="list-li">炸豆腐</view>
-				<view class="list-li">菜心</view>
+
+		<view class="hot-shop list-dl pd30">
+			<text class="list-title">热门商品</text>
+			<view class="list-dt mt20">
+				<view class="list-dd" hover-class="list-dd-add" wx:for="{{ hotList }}" wx:key="unique"> {{ item.name }} </view>
 			</view>	
 		</view>
+
+
 	</view><!--main-->
 </view>
