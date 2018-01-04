@@ -1,12 +1,16 @@
 .top{
 	padding:20rpx 0;
 }
-.back{
-	margin:10rpx 25rpx;
+.back,
+.search-btn{
+	margin:12rpx 25rpx;
 }
 .back image{
-	width:50rpx;
-	height:50rpx;	
+	width:40rpx;
+	height:40rpx;	
+}
+.search{
+	margin:0rpx 10rpx;
 }
 .search input{
 	width:500rpx;
@@ -15,7 +19,4 @@
 	font-size:30rpx;
 	background-color:#fff;
 	padding:0 20rpx;
-}
-.search-btn{
-	margin:10rpx 25rpx;
 }

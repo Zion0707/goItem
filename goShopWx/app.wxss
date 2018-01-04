@@ -1,6 +1,7 @@
 /** 公用样式 **/
 page{
 	background-color:#f2f2f2;
+	font-size:30rpx;
 }
 .header{
 	width:100%;

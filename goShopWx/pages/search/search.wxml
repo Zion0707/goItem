@@ -8,12 +8,20 @@
 				<input placeholder-style="color:#a8a8a8" placeholder="搜索商品名称" />
 			</view>
 			<view class="search-btn">
-				<icon type="search" color="#666" />
+				<icon type="search" color="#666" size="20" />
 			</view>	
 		</view>
 	</view>
 
 	<view class="main">
-		
+		<view class="hot-shop">
+			<text>热门商品</text>
+			<view class="list-ul">
+				<view class="list-li">鱼头豆腐</view>
+				<view class="list-li">蒜香小龙虾</view>
+				<view class="list-li">炸豆腐</view>
+				<view class="list-li">菜心</view>
+			</view>	
+		</view>
 	</view><!--main-->
 </view>
