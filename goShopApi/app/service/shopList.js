@@ -1,7 +1,7 @@
 const Service = require('egg').Service;
 class ShopListServer extends Service{
+	//查询列表
 	async shopList(){
-		//查所有车的数据
 		const res = await this.app.mysql.query('select * from shopList');
 		return { 
 			api:'shopList',

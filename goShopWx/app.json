@@ -4,7 +4,7 @@
 		"pages/index/index"
 	],
 	"window":{
-		"navigationBarTitleText": "Go商城",
+		"navigationBarTitleText": "Go餐饮",
 		"backgroundTextStyle":"light",
 		"navigationBarBackgroundColor": "#ff6700",
 		"navigationBarTextStyle":"white"
