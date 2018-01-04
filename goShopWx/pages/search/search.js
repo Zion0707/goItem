@@ -1,17 +1,15 @@
+//引入外部功能函数
+const utils = require('../../utils/util.js');
+
 const app = getApp()
 Page({
 	data:{
 
 	},
 	onLoad(option){
-		//console.log(option)
-		wx.request({
-			url:'http://127.0.0.1:7001/api/shopList',
-			method:'POST',
-			success(data){
-				console.log(data)
-			}
+		utils.request('/api/shopList',{},function(data){
+			var data = data.data;
+			console.log(data)
 		})
-
 	}
 })

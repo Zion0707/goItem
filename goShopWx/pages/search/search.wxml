@@ -1,3 +1,19 @@
 <view class="content">
-	search
+	<view class="header">
+		<view class="top">
+			<view class="back">
+				<image src="../../images/back.png" />
+			</view>
+			<view class="search">
+				<input placeholder-style="color:#a8a8a8" placeholder="搜索商品名称" />
+			</view>
+			<view class="search-btn">
+				<icon type="search" color="#666" />
+			</view>	
+		</view>
+	</view>
+
+	<view class="main">
+		
+	</view><!--main-->
 </view>

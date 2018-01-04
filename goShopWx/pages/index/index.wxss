@@ -1,15 +1,8 @@
 /* 导入公共样式 */
-@import '../../static/css/style.wxss';
+@import '../../app.wxss';
 
 
 /* 私有样式 */
-.header{
-	width:100%;
-}
-.top{
-	flex-direction:row;
-	display:flex;
-}
 .logo,
 .my{
 	margin-top:10rpx;
@@ -38,7 +31,7 @@
 }
 .search-icon{
 	position:absolute;
-	top:35rpx;
+	top:40rpx;
 	left:20rpx;
 }
 .my image{

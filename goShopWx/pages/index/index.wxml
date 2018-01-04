@@ -2,14 +2,14 @@
 	<view class="header">
 		<view class="top">
 			<view class="logo flex-item">
-				<image src="../../static/images/logo.png"/>
+				<image src="../../images/logo.png"/>
 			</view><!--logo-->
 			<view class="search flex-item">
 				<icon type="search" class="search-icon" size="15"/>
 				<input placeholder-style="color:#a8a8a8" placeholder="搜索商品名称" disabled="true" bindtap="bindSearch" />
 			</view><!--search-->
 			<view class="my flex-item">
-				<image src="../../static/images/my.png"/>
+				<image src="../../images/my.png"/>
 			</view><!--my-->
 		</view>
 	</view>

@@ -1,10 +1,12 @@
-//https://m.mi.com/
 //app.js
 App({
     onLaunch: function () {
 
     },
     globalData: {
-        userInfo: null
+        userInfo: null,
+        conf:{
+        	host:'http://127.0.0.1:7001'
+        }
     }
 })
