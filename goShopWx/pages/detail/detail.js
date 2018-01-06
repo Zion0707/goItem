@@ -15,7 +15,8 @@ Page({
 	    detailMsg:{}
 	},
 	onLoad(option){
-		var id = option.id;
+		var _self = this;
+		var id = option.data;
 
 		//获取详情信息
 		wx.showLoading({
@@ -26,10 +27,10 @@ Page({
 			id: id
 		},function(data){
 			wx.hideLoading();
-
+			
 			var data = data.data;
 			if ( data.code == 0 ) {
-				this.setData({
+				_self.setData({
 					detailMsg: data.list
 				})
 			}else{

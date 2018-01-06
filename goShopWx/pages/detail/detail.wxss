@@ -12,8 +12,8 @@
 	position: relative;
 }
 .detail-icon{
-	width:80rpx;
-	height:80rpx;
+	width:65rpx;
+	height:65rpx;
 	position:absolute;
 	background-color:rgba(0,0,0,.5);
 	z-index:9;
@@ -23,7 +23,7 @@
 .detail-icon image{
 	width:60rpx;
 	height:60rpx;
-	margin:10rpx 8rpx;
+	margin:2rpx 0;
 }
 .detail-back{
 	left:15rpx;	

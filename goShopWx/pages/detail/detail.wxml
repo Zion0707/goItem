@@ -19,16 +19,13 @@
 	<view class="main">
 		<view class="detail-msg">
 			<view class="name"> 
-				青椒炒肉
-				<!-- {{ detailMsg.name }}  -->
+				{{ detailMsg.name }} 
 			</view>		
 			<text class="description"> 
-				梅州特色炒菜，青椒炒肉，色香味全，带点辣哦，店长强烈推荐美食，好评如潮，欢迎品尝。
-				<!-- {{ detailMsg.description }}  -->
+				{{ detailMsg.description }} 
 			</text>	
 			<view class="money"> 
-				￥12.00
-				<!-- {{ detailMsg.money }}  -->
+				￥{{ detailMsg.money }} 
 			</view>			
 		</view>
 	</view>

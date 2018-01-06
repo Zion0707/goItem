@@ -34,10 +34,14 @@ a:hover{color:#fff;}
 
 
 
-
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
 .header{
 	height:80px;
 	background-color:#ff6700;
+	overflow:hidden;
 }
 .logo{
 	background:url(../images/logo.png) center;
@@ -55,6 +59,7 @@ a:hover{color:#fff;}
 .tool a{
 	color:#fff;
 	margin:0 10px;
+	font-size:14px;
 }
 html,
 body,
@@ -72,12 +77,12 @@ body,
 }
 #sidebar {
 	float: left; 
-	width: 300px;
+	width: 260px;
 	height:100%;
 	overflow-y:auto;
 }
 #content {
-	margin-left: 300px;
+	margin-left: 260px;
 	height:100%;
 	overflow-y:auto;
 }
@@ -90,6 +95,10 @@ body,
 }
 .el-menu-item-group__title{
 	display:none;
+}
+.el-table th,
+.el-table td{
+	text-align: center;
 }
 
 
