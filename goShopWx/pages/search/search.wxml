@@ -18,7 +18,9 @@
 		<view class="hot-shop list-dl pd30">
 			<text class="list-title">热门商品</text>
 			<view class="list-dt mt20">
-				<view class="list-dd" hover-class="list-dd-add" wx:for="{{ hotList }}" wx:key="unique"> {{ item.name }} </view>
+				<view class="list-dd" hover-class="list-dd-hover" wx:for="{{ hotList }}" wx:key="unique" data-json="{{ item }}" bindtap="showDetail">
+					{{ item.name }} 
+				</view>
 			</view>	
 		</view>
 

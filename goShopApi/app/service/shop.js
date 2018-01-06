@@ -12,11 +12,28 @@ class ShopServer extends Service{
 	}
 
 	async hotList(req){
-		const res = await this.app.mysql.query(`select * from shopList limit 0,${req.pageSize}`);
+		const res = await this.app.mysql.query(`select * from shopList limit 0,${ req.pageSize }`);
 		return {
 			api:'hotList',
 			code:0,
 			pageSize:req.pageSize,
+			msg:'success',
+			list:res
+		}
+	}
+
+	async foodDetail(req){
+		if ( isNaN( req.id ) ) {
+			return {
+				api:'foodDetail',
+				code:-1,
+				msg:'参数不符合要求！'
+			}
+		}
+		const res = await this.app.mysql.query(`select * from shopList where id=${ req.id }`);
+		return {
+			api:'foodDetail',
+			code:0,
 			msg:'success',
 			list:res
 		}

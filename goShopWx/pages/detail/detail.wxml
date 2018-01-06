@@ -1,0 +1,35 @@
+<view class="content">
+	<view class="shop-photos">
+		<view class="detail-icon detail-back" bindtap="back">
+			<image src="../../images/white_back.png"></image>
+		</view>
+		<view class="detail-icon detail-share">
+			<image src="../../images/white_share.png"></image>
+		</view>
+		<swiper class="swiper" indicator-active-color="#ff6700" indicator-dots="{{indicatorDots}}"
+		  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+		  <block wx:for="{{imgUrls}}" wx:key="key">
+		    <swiper-item>
+		      <image src="{{item}}" class="slide-image"/>
+		    </swiper-item>
+		  </block>
+		</swiper>
+	</view>
+
+	<view class="main">
+		<view class="detail-msg">
+			<view class="name"> 
+				青椒炒肉
+				<!-- {{ detailMsg.name }}  -->
+			</view>		
+			<text class="description"> 
+				梅州特色炒菜，青椒炒肉，色香味全，带点辣哦，店长强烈推荐美食，好评如潮，欢迎品尝。
+				<!-- {{ detailMsg.description }}  -->
+			</text>	
+			<view class="money"> 
+				￥12.00
+				<!-- {{ detailMsg.money }}  -->
+			</view>			
+		</view>
+	</view>
+</view>

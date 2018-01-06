@@ -1,0 +1,63 @@
+@import '../../app.wxss';
+
+.swiper{
+	height:750rpx;
+}
+.swiper image{
+	width:750rpx;
+	height:750rpx;
+	position:absolute;
+}
+.shop-photos{
+	position: relative;
+}
+.detail-icon{
+	width:80rpx;
+	height:80rpx;
+	position:absolute;
+	background-color:rgba(0,0,0,.5);
+	z-index:9;
+	top:15rpx;
+	border-radius:50%;
+}
+.detail-icon image{
+	width:60rpx;
+	height:60rpx;
+	margin:10rpx 8rpx;
+}
+.detail-back{
+	left:15rpx;	
+}
+.detail-share{
+	right:15rpx;	
+}
+.detail-msg{
+	padding:30rpx;
+	background-color:#fff;
+}
+.detail-msg .name{
+	font-size:34rpx;
+}
+.detail-msg .description{
+	color:#ababab;
+	position: relative;
+	top:-5px;
+}
+.detail-msg .money{
+	font-size:40rpx;
+	color:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

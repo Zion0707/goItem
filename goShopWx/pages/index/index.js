@@ -8,7 +8,7 @@ Page({
     //事件处理函数
     bindSearch() {
     	wx.navigateTo({
-		  url: '../search/search?id=1' //实际路径要写全
+		  url: '../search/search'
 		})
     },
     //初始状态

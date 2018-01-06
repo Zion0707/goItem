@@ -29,5 +29,12 @@ Page({
 	},
 	back(){
 		wx.navigateBack();
+	},
+	showDetail(event){
+		var data = event.currentTarget.dataset.json;
+		wx.navigateTo({
+			url:'../detail/detail?data='+data
+		});
+		
 	}
 })

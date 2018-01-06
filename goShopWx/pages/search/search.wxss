@@ -39,7 +39,7 @@
     color: #484848;
     background-color:#fff9f9;
 }
-.list-dd-add{
+.list-dd-hover{
     background-color:#fff;
 }
 
