@@ -5,6 +5,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '../static/css/style.css'
 import '../static/js/jquery.min.js'
+//自定义过滤器文件
+import Filter from './filter.js'
 import App from './App'
 import router from './router'
 

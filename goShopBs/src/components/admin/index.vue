@@ -24,7 +24,7 @@
                     </el-table-column>
                     <el-table-column label="价格">
                       <template slot-scope="scope">
-                        {{ scope.row.money }}
+                        {{ scope.row.money | money }}
                       </template>
                     </el-table-column>
                     <el-table-column label="描述">
@@ -59,7 +59,7 @@ export default {
             loading:true,
             tableData: [],
             pageNo:1,
-            pageSize:2,
+            pageSize:4,
             pageCount:0,
             name:'',
         }
