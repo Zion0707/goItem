@@ -3,7 +3,16 @@ const app = getApp()
 
 Page({
     data: {
-        motto: 'Hello World',
+        indicatorDots: true,
+        autoplay: false,
+        interval: 5000,
+        duration: 500,
+        imgUrls:[
+            '../../images/public/banner/youhui1.jpg',
+            '../../images/public/banner/youhui1.jpg',
+        ],
+        webViewUrl:'',
+        scrollViewHeight:0
     },
     //事件处理函数
     bindSearch() {
@@ -11,8 +20,29 @@ Page({
 		  url: '../search/search'
 		})
     },
+    //webView (个人类型与海外类型的小程序暂不支持使用) 配置范例：http://blog.csdn.net/towtotow/article/details/78527273?fps=1&locationNum=7
+    openWebView(){
+        this.setData({
+            webViewUrl:'https://m.mi.com/'
+        })
+        if ( this.webViewUrl ) {
+            wx.miniProgram.navigateTo({
+                url:'../index/index'
+            })
+        }
+    },  
+
     //初始状态
     onLoad() {
+        var _self = this;
+        wx.getSystemInfo({
+            success(data){
+                var { windowWidth , windowHeight } = data;
+                _self.setData({
+                    scrollViewHeight : windowHeight - 45
+                })
+            }
+        })
 
     }
 })

@@ -4,6 +4,7 @@
  */
 module.exports = app => {
  	const { router, controller } = app;
+ 	router.get('/',controller.home.index)
  	router.post('/api/hotList', controller.shop.hotList);
  	router.post('/api/foodDetail', controller.shop.foodDetail);
 };

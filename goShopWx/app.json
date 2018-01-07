@@ -1,8 +1,8 @@
 {
 	"pages":[
-		"pages/search/search",
+		"pages/index/index",
 		"pages/detail/detail",
-		"pages/index/index"
+		"pages/search/search"
 	],
 	"window":{
 		"navigationBarTitleText": "Go餐饮",

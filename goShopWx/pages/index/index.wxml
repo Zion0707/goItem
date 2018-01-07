@@ -8,12 +8,35 @@
 				<icon type="search" class="search-icon" size="15"/>
 				<input placeholder-style="color:#a8a8a8" placeholder="搜索商品名称" disabled="true" bindtap="bindSearch" />
 			</view><!--search-->
+			<!-- 
 			<view class="my flex-item">
 				<image src="../../images/my.png"/>
-			</view><!--my-->
+			</view> 
+			-->
 		</view>
 	</view>
-	<view class="main">
+	
+	<scroll-view class="main" scroll-y="true" style="height:{{ scrollViewHeight }}px">
+		<swiper class="swiper" indicator-active-color="#ff6700" indicator-dots="{{indicatorDots}}"
+		  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindtap="openWebView">
+		  	<block wx:for="{{imgUrls}}" wx:key="key">
+		  		<swiper-item>
+		    		<image src="{{item}}" class="slide-image"/>
+		    	</swiper-item>
+		  	</block>
+		</swiper>
 		
-	</view><!--main-->
+		<!-- 热门商品列表 -->
+		<!-- 
+		<view class="hot-list">
+			<view class="hot-li">
+				<image src=""></image>
+			</view>
+		</view> 
+		-->
+	</scroll-view><!--main-->
+
+
+	<!-- 打开外网 -->
+	<web-view src="{{ webViewUrl }}" wx:if="{{ webViewUrl }}"></web-view>
 </view>

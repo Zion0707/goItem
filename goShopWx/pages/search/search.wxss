@@ -14,7 +14,7 @@
 	margin:0rpx 10rpx;
 }
 .search input{
-	width:500rpx;
+	width:580rpx;
 	height:64rpx;
 	border:1rpx solid #e8e8e8;
 	font-size:30rpx;

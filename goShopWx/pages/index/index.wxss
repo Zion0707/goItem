@@ -1,8 +1,22 @@
 /* 导入公共样式 */
 @import '../../app.wxss';
 
-
-/* 私有样式 */
+.header{
+	position: fixed;
+	left:0;
+	top:0;
+	z-index:999;
+	background-color:#f2f2f2;
+	box-shadow: 0 2rpx 4rpx -1rpx rgba(0,0,0,.2);
+}
+.swiper{
+	height:400rpx;
+}
+.swiper image{
+	width:750rpx;
+	height:400rpx;
+	position:absolute;
+}
 .logo,
 .my{
 	margin-top:10rpx;
@@ -16,7 +30,7 @@
 	margin-top:15rpx;
 }
 .search input{
-	width:470rpx;
+	width:550rpx;
 	padding-left:70rpx;
 	height:64rpx;
 	border:1rpx solid #e8e8e8;
@@ -25,7 +39,7 @@
 	background-color:#fff;
 }
 .search{
-	width:540rpx;
+	width:650rpx;
 	position: relative;
 	margin:0 10rpx;
 }
@@ -40,3 +54,11 @@
 	margin-top:10rpx;
 	margin-left:15rpx;
 }
+.swiper{
+	border-top:2rpx solid #eee;
+	border-bottom:2rpx solid #eee;
+}
+.main{
+	padding-top:45px;
+}
+

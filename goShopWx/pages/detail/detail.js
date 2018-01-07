@@ -8,8 +8,8 @@ Page({
 	    interval: 5000,
 	    duration: 500,
 	    imgUrls:[
-	    	'../../images/food/food_1.jpg',
-	    	'../../images/food/food_2.jpg',
+	    	'../../images/public/food/food_1.jpg',
+	    	'../../images/public/food/food_2.jpg',
 	    ],
 
 	    detailMsg:{}

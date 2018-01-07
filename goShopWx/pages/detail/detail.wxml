@@ -1,8 +1,10 @@
 <view class="content">
 	<view class="shop-photos">
+		<!--
 		<view class="detail-icon detail-back" bindtap="back">
 			<image src="../../images/white_back.png"></image>
 		</view>
+		-->
 		<view class="detail-icon detail-share">
 			<image src="../../images/white_share.png"></image>
 		</view>
