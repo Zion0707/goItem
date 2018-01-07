@@ -14,7 +14,7 @@ Page({
 			pageNo:'1',
 			pageSize:'8'
 		},function(data){
-			var data = data.data;
+			var { data } = data;
 			if ( data.code == 0 ) {
 				_self.setData({
 					'hotList':data.list

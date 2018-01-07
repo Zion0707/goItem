@@ -28,7 +28,7 @@ Page({
 		},function(data){
 			wx.hideLoading();
 			
-			var data = data.data;
+			var { data } = data;
 			if ( data.code == 0 ) {
 				_self.setData({
 					detailMsg: data.list
