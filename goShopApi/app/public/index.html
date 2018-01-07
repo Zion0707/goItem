@@ -2,41 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>egg</title>
+	<title>Document</title>
 </head>
 <body>
-<div id="app">
-
-	<ul>
-		<li v-for="item in list">{{ item.name }}</li>
-	</ul>
-	
-
-</div>
-<script src="js/vue.min.js"></script>
-<script src="js/axios.min.js"></script>
-<script>
-var vm = new Vue({
-	el :'#app',
-	data:{
-		list:[]
-	},
-	methods:{
-		
-	},
-	mounted(){
-		var _self = this;
-		axios.post('/api/shopList')
-		.then(function(data){
-			var data = data.data;
-			_self.list = data.list;
-		})
-		.catch(function(err){
-			console.log(err)
-		})
-
-	}
-})
-</script>
+	egg.js
 </body>
 </html>

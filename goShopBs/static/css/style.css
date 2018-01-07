@@ -100,5 +100,44 @@ body,
 .el-table td{
 	text-align: center;
 }
+.more-btn{
+	font-size:30px;
+	color:#fff;
+	line-height:80px;
+	display: none;
+	margin:0 20px;
+}
+@media screen and (max-width: 1000px) {
+    #sidebar{
+		display: none;
+    }
+    #content{
+    	margin-left:0;
+    }
+    .logo{
+    	display: none;
+    }
+	.more-btn{	
+		display: block;
+	}	
+}
+
+.el-input{
+	margin:4px 0;
+}
+.sidebar-toggle #sidebar{
+	display: block;
+}
+
+.sidebar-toggle #content{
+	margin-left:260px;
+}
+
+
+
+
+
+
+
 
 

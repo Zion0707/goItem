@@ -2,10 +2,11 @@
 	<div class="page">
 		<header class="header">
 			<div class="fl">
-				<a class="logo">Go</a>
+				<a class="logo fl">Go</a>
+				<a href="javascript:;" class="more-btn el-icon-more fl"></a>
 			</div>
 			<div class="fr tool">
-				<a href="#">刷新</a>
+				<a href="javascript:;" @click="reload">刷新</a>
 				<a href="#">退出</a>
 			</div>
 		</header>
@@ -19,8 +20,8 @@
 			      	@close="handleClose">
 				
 
-			      	<el-menu-item index="1">
-			        	<i class="el-icon-location"></i>
+			      	<el-menu-item index="1" @click="routerPush('index')">
+			        	<i class="el-icon-document"></i>
 			        	<span slot="title">菜单信息</span>
 			      	</el-menu-item>
 			      	<el-submenu index="2">
@@ -52,17 +53,27 @@ export default{
 		}
 	},
 	methods: {
-      handleOpen(key, keyPath) {
+     	handleOpen(key, keyPath) {
 
-      },
-      handleClose(key, keyPath) {
+      	},
+      	handleClose(key, keyPath) {
 
-      }
+      	},
+      	reload(){
+      		window.location.reload()
+      	},
+      	routerPush(val){
+      		this.$router.push({ path:'/admin/'+val });
+      	}
     },
     mounted(){
     	$('#wrap').height($(window).height() - 80);
     	$(window).on('resize',function(){
    	 		$('#wrap').height($(window).height() - 80);
+    	});
+
+    	$('.more-btn').on('click',function(){
+    		$('#wrap').toggleClass('sidebar-toggle');
     	})
     }
 }

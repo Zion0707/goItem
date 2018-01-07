@@ -16,6 +16,12 @@ export default new Router({
 	                component(resolve){
 	                    require(['@/components/admin/index'], resolve)
 	                }
+	            },
+	            {
+	            	path:'tool_food',
+	            	component(resolve){
+	            		require(['@/components/admin/tool_food'], resolve)
+	            	}
 	            }
 	        ]	
 		}

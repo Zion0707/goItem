@@ -8,13 +8,6 @@ Page({
 	},
 	onLoad(option){
 		var _self = this;
-		//全部食物
-		utils.request('/api/shopList',{
-			pageNo:'1',
-			pageSize:'50'
-		},function(data){
-			var data = data.data;
-		})
 
 		//热门食物
 		utils.request('/api/hotList',{
