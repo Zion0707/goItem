@@ -16,7 +16,7 @@ Page({
 	},
 	onLoad(option){
 		var _self = this;
-		var id = option.data;
+		var id = option.id;
 
 		//获取详情信息
 		wx.showLoading({
@@ -35,7 +35,7 @@ Page({
 				})
 			}else{
 				wx.showModal({
-					title : '温馨提交',
+					title : '提示',
 					content : data.msg,
 					showCancel : false,
 					confirmColor:'#ff6700',

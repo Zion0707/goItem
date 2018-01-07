@@ -19,21 +19,27 @@
 	<scroll-view class="main" scroll-y="true" style="height:{{ scrollViewHeight }}px">
 		<swiper class="swiper" indicator-active-color="#ff6700" indicator-dots="{{indicatorDots}}"
 		  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindtap="openWebView">
-		  	<block wx:for="{{imgUrls}}" wx:key="key">
+		  	<block wx:for="{{ imgUrls }}" wx:key="key">
 		  		<swiper-item>
-		    		<image src="{{item}}" class="slide-image"/>
+		    		<image src="{{ item }}" class="slide-image"/>
 		    	</swiper-item>
 		  	</block>
 		</swiper>
 		
 		<!-- 热门商品列表 -->
-		<!-- 
 		<view class="hot-list">
-			<view class="hot-li">
-				<image src=""></image>
+			<view class="hot-li" wx:for="{{ hotList }}" wx:key="key" bindtap="showDetail" data-id="{{ item.id }}">
+				<view class="hot-img">
+					<image src="{{ hotImg }}"></image>
+				</view>
+				<view class="hot-content">
+					<view class="hc-name">{{ item.name }}</view>
+					<view class="hc-description">{{ item.description }}</view>
+					<view class="hc-money">￥{{ item.money | userBirthday}}</view>
+				</view>
 			</view>
 		</view> 
-		-->
+		
 	</scroll-view><!--main-->
 
 

@@ -26,11 +26,11 @@ Page({
 	back(){
 		wx.navigateBack();
 	},
+	//显示详情页
 	showDetail(event){
-		var data = event.currentTarget.dataset.id;
+		var id = event.currentTarget.dataset.id;
 		wx.navigateTo({
-			url:'../detail/detail?data='+data
+			url:'../detail/detail?id='+id
 		});
-		
 	}
 })
