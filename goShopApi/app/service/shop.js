@@ -6,26 +6,25 @@ class ShopServer extends Service{
 		var start = req.pageSize * (req.pageNo-1);
 		var end = req.pageSize ;
 
-		var count = await this.app.mysql.query(`select count(*) from shopList`);
-		var pageCount= parseInt( new String(count[0]['count(*)'])[0] );
-
 		var resObj = {
 			api: 'hotList',
 			code: 0,
 			name: req.name || '' ,
 			pageNo: parseInt( req.pageNo ),
 			pageSize: parseInt( req.pageSize ),
-			pageCount: pageCount,
 			msg: 'success'
 		}
 
 		if ( req.name ) {
-			const res = await this.app.mysql.query(`select * from shopList where name like "%${ req.name }%" limit ${ start },${ end }`);
+			const res = await this.app.mysql.query(`select sql_calc_found_rows * from shopList where name like "%${ req.name }%" limit ${ start },${ end }`);
+			const count = await this.app.mysql.query(`select found_rows()`);
+			resObj.pageCount = count[0]['found_rows()']
 			resObj.list = res;
 			return resObj;
 		}else{
-			const res = await this.app.mysql.query(`select * from shopList limit ${ start },${ end }`);
-
+			const res = await this.app.mysql.query(`select sql_calc_found_rows * from shopList limit ${ start },${ end }`);
+			const count = await this.app.mysql.query(`select found_rows()`);
+			resObj.pageCount = count[0]['found_rows()']
 			resObj.list = res;
 			return resObj;
 		}
