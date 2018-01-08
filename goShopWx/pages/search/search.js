@@ -7,8 +7,9 @@ Page({
 		hotList:[]
 	},
 	onLoad(option){
-		var _self = this;
+		wx.setNavigationBarTitle({ title : '搜索商品' });
 
+		var _self = this;
 		//热门食物
 		utils.request('/api/hotList',{
 			pageNo:'1',

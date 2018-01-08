@@ -15,6 +15,8 @@ Page({
 	    detailMsg:{}
 	},
 	onLoad(option){
+		wx.setNavigationBarTitle({ title : '产品详情' });
+
 		var _self = this;
 		var id = option.id;
 
