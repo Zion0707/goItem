@@ -1,5 +1,5 @@
 //引入外部功能函数
-const utils = require('../../utils/util.js');
+const util = require('../../util/util.js');
 
 const app = getApp()
 Page({
@@ -11,7 +11,7 @@ Page({
 
 		var _self = this;
 		//热门食物
-		utils.request('/api/hotList',{
+		util.request('/api/hotList',{
 			pageNo:'1',
 			pageSize:'8'
 		},function(data){

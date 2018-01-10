@@ -1,3 +1,5 @@
+<wxs src="../../util/util.wxs" module="util" />
+
 <view class="content">
 	<view class="header">
 		<view class="top">
@@ -35,14 +37,15 @@
 				<view class="hot-content">
 					<view class="hc-name">{{ item.name }}</view>
 					<view class="hc-description">{{ item.description }}</view>
-					<view class="hc-money">￥{{ item.money | userBirthday}}</view>
+					<view class="hc-money">￥{{ util.money( item.money ) }}</view>
 				</view>
 			</view>
 		</view> 
 		
 	</scroll-view><!--main-->
 
-
+	
 	<!-- 打开外网 -->
 	<web-view src="{{ webViewUrl }}" wx:if="{{ webViewUrl }}"></web-view>
 </view>
+

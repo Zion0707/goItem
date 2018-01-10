@@ -96,7 +96,6 @@ function request(url,postData,doSuccess,doFail,doComplete){
    });
 }
 
-
 module.exports = {
     formatTime: formatTime,
     money: money,

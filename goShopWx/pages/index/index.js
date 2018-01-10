@@ -1,4 +1,4 @@
-const util = require('../../utils/util.js');
+const util = require('../../util/util.js');
 //获取应用实例
 const app = getApp()
 
