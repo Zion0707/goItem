@@ -6,12 +6,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 // 自定义文件
 import '../static/css/style.css'
-// import '../static/js/jquery.min.js'
-// import '../static/js/utils.js'
-
-
 //自定义过滤器文件
-import Filter from './filter.js'
+import Filter from './filter.js';
+
+
 import App from './App'
 import router from './router'
 

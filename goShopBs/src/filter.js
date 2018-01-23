@@ -1,5 +1,7 @@
 /** Vue 自定义过滤器整合 **/ 
-import Vue from 'vue'
+import Vue from 'vue';
+
+
 //金额数值大写转换
 Vue.filter('moneyDx',function(n){
     if ( n === '0' ) return '零元';
@@ -17,6 +19,8 @@ Vue.filter('moneyDx',function(n){
         str += '零壹贰叁肆伍陆柒捌玖'.charAt(n.charAt(i)) + unit.charAt(i);
     return str.replace(/零(千|百|拾|角)/g, "零").replace(/(零)+/g, "零").replace(/零(万|亿|元)/g, "$1").replace(/(亿)万|壹(拾)/g, "$1$2").replace(/^元零?|零分/g, "").replace(/元$/g, "元整");
 })
+
+
 //保留两位小数金额（常用）
 Vue.filter('money',function(num) {
     if( !num ) return '0.00';
@@ -34,6 +38,8 @@ Vue.filter('money',function(num) {
     num.substring(num.length-(4*i+3));
     return (((sign)?'':'-') + num + '.' + cents);
 })
+
+
 //vue 全局金额过滤器 [s数值,n保留几位数]
 Vue.filter('moneyN',function(s, n) {
     if( !s ) return '0.00';
@@ -47,6 +53,8 @@ Vue.filter('moneyN',function(s, n) {
   }
   return t.split("").reverse().join("") + "." + r;
 })
+
+
 //vue保留两位小数，但不四舍五入 
 Vue.filter('floatingPoint',function(s,n){
     if( !s ) return '0.00';
