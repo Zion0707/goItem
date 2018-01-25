@@ -47,36 +47,38 @@ Page({
     //列表数据
     getDataList(pageNo , pageSize ){
         var _self = this;
-        
-        wx.showLoading();
-        util.request('/api/hotList',{
-            pageNo: pageNo ,
-            pageSize: pageSize
-        },function(data){
-            wx.hideLoading();
-            var { data } = data;
-            if ( data.code == 0 ) {
+        //如果没有更多就不再请求了
+        if ( !_self.data.notMore ) {
+            wx.showLoading();
+            util.request('/api/hotList',{
+                pageNo: pageNo ,
+                pageSize: pageSize
+            },function(data){
+                wx.hideLoading();
+                var { data } = data;
+                if ( data.code == 0 ) {
 
-                if ( data.list.length ) {
-                    var newArr = _self.data.hotList.concat(data.list);
-                    _self.setData({
-                        hotList : newArr
-                    });
+                    if ( data.list.length ) {
+                        var newArr = _self.data.hotList.concat(data.list);
+                        _self.setData({
+                            hotList : newArr
+                        });
+                    }else{
+
+                        _self.setData({
+                            notMore : true
+                        })
+                    }
+
                 }else{
-
-                    _self.setData({
-                        notMore : true
+                    wx.showModal({
+                        title : '提示',
+                        content: data.msg,
+                        showCancel : false
                     })
                 }
-
-            }else{
-                wx.showModal({
-                    title : '提示',
-                    content: data.msg,
-                    showCancel : false
-                })
-            }
-        })
+            })
+        }
     },
 
     lower: function(e) {
