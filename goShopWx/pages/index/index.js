@@ -16,6 +16,9 @@ Page({
         scrollViewHeight:0,
         hotImg:'../../images/public/food/food_1.jpg',
         hotList:[],
+        pageNo:1,
+        pageSize:6,  
+        notMore:false,
     },
     //事件处理函数
     bindSearch() {
@@ -41,9 +44,51 @@ Page({
         })
     },
 
-    //初始状态
-    onLoad() {
+    //列表数据
+    getDataList(pageNo , pageSize ){
         var _self = this;
+        
+        wx.showLoading();
+        util.request('/api/hotList',{
+            pageNo: pageNo ,
+            pageSize: pageSize
+        },function(data){
+            wx.hideLoading();
+            var { data } = data;
+            if ( data.code == 0 ) {
+
+                if ( data.list.length ) {
+                    var newArr = _self.data.hotList.concat(data.list);
+                    _self.setData({
+                        hotList : newArr
+                    });
+                }else{
+
+                    _self.setData({
+                        notMore : true
+                    })
+                }
+
+            }else{
+                wx.showModal({
+                    title : '提示',
+                    content: data.msg,
+                    showCancel : false
+                })
+            }
+        })
+    },
+
+    lower: function(e) {
+        var { data } = this;
+        this.getDataList( ++data.pageNo , data.pageSize );
+    },
+
+    //初始状态
+    onLoad:function() {
+        var _self = this;
+        var { data } = this;
+
         //获取系统信息
         wx.getSystemInfo({
             success(data){
@@ -54,24 +99,7 @@ Page({
             }
         });
 
-        //列表数据
-        util.request('/api/hotList',{
-            pageNo:1,
-            pageSize:1000
-        },function(data){
-            var { data } = data;
-            if ( data.code == 0 ) {
-                _self.setData({
-                    hotList : data.list
-                })
-            }else{
-                wx.showModal({
-                    title : '提示',
-                    content: data.msg,
-                    showCancel : false
-                })
-            }
-        })
+        this.getDataList( data.pageNo , data.pageSize );
 
-    }
+    },
 })

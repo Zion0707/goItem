@@ -18,7 +18,7 @@
 		</view>
 	</view>
 	
-	<scroll-view class="main" scroll-y="true" style="height:{{ scrollViewHeight }}px">
+	<scroll-view class="main" scroll-y="true" style="height:{{ scrollViewHeight }}px" bindscrolltolower="lower">
 		<swiper class="swiper" indicator-active-color="#ff6700" indicator-dots="{{indicatorDots}}"
 		  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindtap="openWebView">
 		  	<block wx:for="{{ imgUrls }}" wx:key="key">
@@ -42,7 +42,9 @@
 			</view>
 		</view> 
 		
+		<view class="not-more" wx:if="{{ notMore }}">-- 底线 --</view>
 	</scroll-view><!--main-->
+
 
 	
 	<!-- 打开外网 -->
