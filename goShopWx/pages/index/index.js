@@ -57,19 +57,16 @@ Page({
                 wx.hideLoading();
                 var { data } = data;
                 if ( data.code == 0 ) {
-
                     if ( data.list.length ) {
                         var newArr = _self.data.hotList.concat(data.list);
                         _self.setData({
                             hotList : newArr
                         });
                     }else{
-
                         _self.setData({
                             notMore : true
                         })
                     }
-
                 }else{
                     wx.showModal({
                         title : '提示',
