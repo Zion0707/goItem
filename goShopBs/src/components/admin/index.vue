@@ -88,9 +88,9 @@ export default {
     methods: {
         goChange(type, val){
             if ( val ) {
-                this.$router.push({ path: '/admin/tool_food', query: { type: type , id : val.id } });
+                this.$router.push({ path: '/tool_food', query: { type: type , id : val.id } });
             }else{
-                this.$router.push({ path: '/admin/tool_food'});
+                this.$router.push({ path: '/tool_food'});
             }
         },
 

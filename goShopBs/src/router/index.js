@@ -6,9 +6,15 @@ Vue.use(Router)
 export default new Router({
 	routes: [
 		{
-			path:'/admin',
+			path:'*',
 	        component(resolve){
-	            require(['@/components/admin/include'], resolve)
+	            require(['@/components/include'], resolve)
+	        }
+		},
+		{
+			path:'/',
+	        component(resolve){
+	            require(['@/components/include'], resolve)
 	        },
 	        children:[
 	            {

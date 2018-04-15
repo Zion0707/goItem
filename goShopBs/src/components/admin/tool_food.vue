@@ -1,7 +1,7 @@
 <template>
 	<div class="page clearfix">
 		<el-breadcrumb>
-            <el-breadcrumb-item :to="{ path : '/admin/index' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item :to="{ path : '/index' }">首页</el-breadcrumb-item>
             <el-breadcrumb-item>{{ type == 'add' ? '新增' : '修改' }}</el-breadcrumb-item>
         </el-breadcrumb>
 
@@ -9,16 +9,16 @@
 				
 			<el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="150px" class="demo-ruleForm">
 				<el-form-item label="商品名称" prop="name">
-				    <el-input v-model="ruleForm.name"></el-input>
+				    <el-input v-model="ruleForm.name" placeholder="请输入商品名称"></el-input>
 				</el-form-item>
 				<el-form-item label="商品价格" prop="money">
-				    <el-input v-model="ruleForm.money"></el-input>
+				    <el-input v-model="ruleForm.money" placeholder="请输入商品价格"></el-input>
 				</el-form-item>
 				<el-form-item label="商品类型" prop="type">
-				    <el-input v-model="ruleForm.type"></el-input>
+				    <el-input v-model="ruleForm.type" placeholder="请输入商品类型（整数类型）"></el-input>
 				</el-form-item>
 				<el-form-item label="商品描述" prop="description">
-				    <el-input v-model="ruleForm.description"></el-input>
+				    <el-input v-model="ruleForm.description" placeholder="请输入商品描述"></el-input>
 				</el-form-item>
 				<el-form-item>
 			    	<el-button type="primary" @click="submitForm('ruleForm')" v-loading.fullscreen.lock="loading" element-loading-text="正在提交中..">提交</el-button>
@@ -80,7 +80,7 @@ export default{
 			                		type: 'success',
 			                		message: data.msg,
 			                		onClose(){
-			                			_self.$router.push({ path : '/admin/index' });
+			                			_self.$router.push({ path : '/index' });
 			                		}
 			                	})
 			                }else{

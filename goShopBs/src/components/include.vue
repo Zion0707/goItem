@@ -63,7 +63,7 @@ export default{
       		window.location.reload()
       	},
       	routerPush(val){
-      		this.$router.push({ path:'/admin/'+val });
+      		this.$router.push({ path : '/'+val });
       	}
     },
     mounted(){
