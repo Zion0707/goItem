@@ -1,5 +1,5 @@
 # goItem
-Go餐饮一整套代码范例
+【Go餐饮】一整套代码范例
 
 ### 文件夹说明
 1、goShopApi 为php接口代码
